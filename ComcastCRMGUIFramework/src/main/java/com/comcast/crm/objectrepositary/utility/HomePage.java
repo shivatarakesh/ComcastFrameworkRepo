@@ -20,6 +20,9 @@ public class HomePage {
 	@FindBy(linkText = "Contacts")
 	private WebElement contactLink;
 	
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
+	
 	@FindBy(linkText = "Campaigns")
 	private WebElement campaignLink;
 	
