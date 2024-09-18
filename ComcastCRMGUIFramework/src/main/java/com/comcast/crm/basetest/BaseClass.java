@@ -63,8 +63,8 @@ public class BaseClass {
 	@BeforeClass(groups= {"smokeTest","regressionTest"})
 	public void configBC(/*String browser*/) throws Throwable {
 		System.out.println("===Launch The Browser===");
-		String BROWSER =/*browser;*/  fLib.getDataFromPropertiesFile("browser");	
-		
+	//	String BROWSER =/*browser;*/  fLib.getDataFromPropertiesFile("browser");	
+		String BROWSER =System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));	
 		if(BROWSER.equals("chrome")) {
 			 driver=new ChromeDriver();
 		}
